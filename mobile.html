@@ -2,41 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Fede & Jen — Mobile</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Fede & Jen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    html,body { height:100%; margin:0; background:#fff; }
-    /* the iframe will be scaled to fill width */
-    #frame {
-      position: fixed;
-      top: 0; left: 0;
-      border: 0;
-      display: block;
-      transform-origin: top left;
-      /* width/height will be set by JS */
-    }
+    html,body{height:100%;margin:0}
+    iframe{position:fixed;left:0;top:-51px;width:100%;height:108%;border:0}
   </style>
 </head>
 <body>
-  <iframe id="frame" src="https://fedejen.wixsite.com/fedejen" title="Fede & Jen"></iframe>
-
-  <script>
-    (function () {
-      // If the embedded page renders at a fixed desktop width (common is 980),
-      // set that here. Adjust if your embed uses a different base width.
-      var DESIGN_WIDTH = 980;
-
-      var f = document.getElementById('frame');
-      function fit() {
-        var scale = window.innerWidth / DESIGN_WIDTH;
-        f.style.width  = DESIGN_WIDTH + 'px';
-        f.style.height = (window.innerHeight / scale) + 'px';
-        f.style.transform = 'scale(' + scale + ')';
-      }
-      window.addEventListener('resize', fit);
-      f.addEventListener('load', fit);
-      fit();
-    })();
-  </script>
+  <iframe src="https://fedejen.wixsite.com/fedejen" title="Fede & Jen – Mobile"></iframe>
 </body>
 </html>
